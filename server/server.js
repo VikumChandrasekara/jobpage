@@ -85,12 +85,35 @@ app.get("/api/jobs", (req, res) => {
     });
   });
 
-  app.use((req, res) => {
-    res.status(404).json({ error: "Endpoint not found" });
+
+
+// find job by using id
+// GET API Endpoint to Fetch Job Data by job_id
+app.get("/api/jobs/:job_id", (req, res) => {
+  const jobId = req.params.job_id;
+
+  const query = "SELECT * FROM job_details WHERE job_id = ?";
+  db.query(query, [jobId], (err, results) => {
+    if (err) {
+      console.error("Query error:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    if (results.length === 0) {
+      return res.status(404).json({ error: "Job not found" });
+    }
+    res.json(results[0]);
   });
+});
+
+
+
+app.use((req, res) => {
+  res.status(404).json({ error: "Endpoint not found" });
+});
 
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+console.log(`Server is running on port ${PORT}`);
 });
+
