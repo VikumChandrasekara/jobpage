@@ -185,6 +185,104 @@ app.delete("/api/jobs/:job_id", (req, res) => {
   });
 });
 
+//blogs
+// POST API Endpoint to Insert Blog Data
+app.post("/api/blogs", (req, res) => {
+  const { blog_title, blog_description, posted_date } = req.body;
+
+  if (!blog_title || !blog_description || !posted_date) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
+  const query = `INSERT INTO blog_details (blog_title, blog_description, posted_date) VALUES (?, ?, ?)`;
+
+  db.query(query, [blog_title, blog_description, posted_date], (err, result) => {
+    if (err) {
+      console.error("Error inserting blog data: ", err);
+      res.status(500).json({ message: "Internal Server Error" });
+    } else {
+      res.status(201).json({ message: "Blog posted successfully", blog_id: result.insertId });
+    }
+  });
+});
+
+// GET API Endpoint to Fetch All Blogs
+app.get("/api/blogs", (req, res) => {
+  const query = "SELECT * FROM blog_details";
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Query error:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    res.json(results);
+  });
+});
+
+// GET API Endpoint to Fetch Blog by blog_id
+app.get("/api/blogs/:blog_id", (req, res) => {
+  const blogId = req.params.blog_id;
+
+  const query = "SELECT * FROM blog_details WHERE blog_id = ?";
+  db.query(query, [blogId], (err, results) => {
+    if (err) {
+      console.error("Query error:", err);
+      return res.status(500).json({ error: "Database error" });
+    }
+    if (results.length === 0) {
+      return res.status(404).json({ error: "Blog not found" });
+    }
+    res.json(results[0]);
+  });
+});
+
+// PUT API Endpoint to Update Blog Data
+app.put("/api/blogs/:blog_id", (req, res) => {
+  const blogId = req.params.blog_id;
+  const { blog_title, blog_description, posted_date } = req.body;
+
+  if (!blog_title || !blog_description || !posted_date) {
+    return res.status(400).json({ message: "Missing required fields" });
+  }
+
+  const query = `UPDATE blog_details SET blog_title = ?, blog_description = ?, posted_date = ? WHERE blog_id = ?`;
+
+  db.query(query, [blog_title, blog_description, posted_date, blogId], (err, result) => {
+    if (err) {
+      console.error("Error updating blog data: ", err);
+      return res.status(500).json({ message: "Internal Server Error" });
+    }
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+    res.status(200).json({ message: "Blog updated successfully" });
+  });
+});
+
+// DELETE API Endpoint to Delete a Blog
+app.delete("/api/blogs/:blog_id", (req, res) => {
+  const blogId = req.params.blog_id;
+
+  const query = "DELETE FROM blog_details WHERE blog_id = ?";
+  db.query(query, [blogId], (err, result) => {
+    if (err) {
+      console.error("Error deleting blog: ", err);
+      return res.status(500).json({ message: "Internal Server Error" });
+    }
+    if (result.affectedRows === 0) {
+      return res.status(404).json({ message: "Blog not found" });
+    }
+    res.status(200).json({ message: "Blog deleted successfully" });
+  });
+});
+
+//end of blog
+
+
+
+
+
+
+
 // Handle Invalid Routes
 app.use((req, res) => {
   res.status(404).json({ error: "Endpoint not found" });
@@ -195,4 +293,5 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
 
