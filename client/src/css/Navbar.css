@@ -1,0 +1,74 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 220px;
+    color: var(--text-color-b);
+  }
+  
+  .navbar .logo img {
+    height: 40px; 
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin: 0 20px;
+  }
+  
+  .nav-links a {
+ 
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-color-b);
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-buttons .apply-btn,
+  .nav-buttons .post-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color-b);
+    font-size: 14px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+  }
+  
+
+.nav-buttons .apply-btn {
+    background-color: var(--secondary-color);
+    color: var(--text-color-w);
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-buttons .apply-btn:hover {
+    background-color: var(--secondary-color-h); 
+  }
+  
+  .nav-buttons .post-btn {
+    background-color: var(--primary-color);
+    color: var(--text-color-w);
+    transition: background-color 0.3s ease; 
+  }
+  
+  .nav-buttons .post-btn:hover {
+    background-color: var(--primary-color-h);
+  
+  }
+  
