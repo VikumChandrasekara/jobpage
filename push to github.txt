@@ -1,0 +1,13 @@
+Thrimaa Interactive
+09:19
+git branch
+Thrimaa Interactive
+09:20
+git checkout -b deshan
+Thrimaa Interactive
+09:23
+git add .
+git commit -m ""
+Thrimaa Interactive
+09:24
+git push origin deshan
