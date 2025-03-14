@@ -16,7 +16,61 @@ const SearchArea = () => {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                 />
+
+                
             </div>
+            <div className="search-input">
+                <input
+                    type="text"
+                    placeholder="UI/UX Designing"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+
+                
+            </div>
+
+            <div className="search-input flex items-center bg-white px-3 py-2 rounded-lg shadow-md">
+              <input
+                  type="text"
+                  placeholder="Full time job"
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="w-full border-none focus:ring-0"
+              />
+              <select
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                  className="ml-2 p-2 border rounded-lg bg-white"
+              >
+                  <option value="Full time job">Full Time</option>
+                  <option value="Part time job">Part Time</option>
+              </select>
+            </div>
+
+
+            <div className="search-input">
+                <input
+                    type="text"
+                    placeholder="New York,USA"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+
+                
+            </div>
+
+            <div className="search-input">
+                <input
+                    type="text"
+                    placeholder="Salary Range"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                />
+
+                
+            </div>
+
             <button className="find-button">Find now</button>
         </div>
     </div>
