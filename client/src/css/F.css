@@ -1,0 +1,138 @@
+/* F.css */
+.newsletter-container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    
+    
+    
+  }
+  
+  .newsletter-image {
+    width: auto;
+    display: block;
+    margin : 0 auto;
+    
+  }
+  
+  .newsletter-text { 
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px 220px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+    line-height: 1.2; /* Adjust line spacing */
+}
+
+/* Email box container */
+.email-container {
+  position: absolute;
+  bottom: 50px; /* Moves it slightly up */
+  left: 220px; /* Moves it a bit more to the right */
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 50%; /* Adjust width for better alignment */
+  max-width: 500px; /* Ensures it doesn't get too wide */
+}
+
+/* Email input field */
+.email-input {
+  border: none;
+  outline: none;
+  padding: 12px;
+  font-size: 16px;
+  flex: 1;
+  border-radius: 50px 0 0 50px;
+  width: 100%;
+}
+
+/* Subscribe button */
+.subscribe-button {
+  background: #a770f0;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 50px 50px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background: #8755d0;
+}
+
+
+/* Image slider container */
+.image-slider-container {
+  position: absolute;
+  bottom: -130px; /* Position below main image */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* Scrollable image slider */
+.image-slider {
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+/* Individual slider box */
+.slider-box {
+  flex: 0 0 calc(100% / 7); /* Ensures 7 images fit */
+  aspect-ratio: 4 / 1; /* Maintains 4:1 aspect ratio */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Images inside slider boxes */
+.slider-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Navigation buttons */
+.slider-button {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slider-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
