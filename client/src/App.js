@@ -1,7 +1,7 @@
 import './App.css';
 import Banner from './components/Banner';
-import F from './components/F';
 import Navbar from './components/Navbar';
+import NewsLetter from './components/NewsLetter';
 import SearchArea from './components/SearchArea';
 import SocialMediaFeeds from './components/SocialMediaFeeds'; // Import the new component
 
@@ -13,7 +13,7 @@ function App() {
         <SearchArea />
         <Banner/>
         
-        <F/>
+        <NewsLetter/>
         <SocialMediaFeeds /> 
       </>
     </div>
