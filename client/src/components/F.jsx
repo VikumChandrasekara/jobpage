@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import f from "../assets/Newsletter.png"; // Image location
 import "../css/F.css"; // Import CSS file
-import { FaPaperPlane } from "react-icons/fa"; // Import send icon
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FaPaperPlane } from "react-icons/fa"; // Import send icon
 
 const F = () => {
   const sliderRef = useRef(null);
@@ -38,7 +39,8 @@ const F = () => {
           className="email-input"
         />
         <button className="subscribe-button">
-          Subscribe <FaPaperPlane />
+          Subscribe 
+          
         </button>
       </div>
       </div>
