@@ -3,8 +3,12 @@ import f from "../assets/Newsletter.png"; // Image location
 import "../css/F.css"; // Import CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { FaPaperPlane } from "react-icons/fa"; // Import send icon
+import NewsLetterBG from "../assets/Newsletter.png"; // Image location
+import "../css/NewsLetter.css"; // Import CSS file
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-const F = () => {
+const NewsLetter = () => {
   const sliderRef = useRef(null);
 
   const scrollLeft = () => {
@@ -23,7 +27,7 @@ const F = () => {
     <div className="newsletter-container">
       <div>
       {/* Image */}
-      <img src={f} alt="Newsletter" className="newsletter-image" />
+      <img src={NewsLetterBG} alt="Newsletter" className="newsletter-image" />
 
       {/* Overlay Text */}
       <div className="newsletter-text">
@@ -39,8 +43,9 @@ const F = () => {
           className="email-input"
         />
         <button className="subscribe-button">
-          Subscribe 
-          
+
+          Subscribe <FontAwesomeIcon icon={faPaperPlane} />
+
         </button>
       </div>
       </div>
@@ -62,4 +67,4 @@ const F = () => {
   );
 };
 
-export default F;
+export default NewsLetter;
