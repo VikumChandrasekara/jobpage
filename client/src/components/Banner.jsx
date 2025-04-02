@@ -1,13 +1,15 @@
 import React from "react";
 import banner from "../assets/banner.png"; // location
+import '../css/Banner.css';
 
 const Banner = () => {
   return (
-    <img 
-      src={banner} 
-      alt="Banner" 
-      style={{ display: "block", margin: "0 auto" }} 
-    />
+    <div className="banner">
+      <img 
+        src={banner} 
+        alt="Banner"
+      />  
+    </div>
   );
 };
 

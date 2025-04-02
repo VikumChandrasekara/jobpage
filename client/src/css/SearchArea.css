@@ -1,7 +1,7 @@
 /* SearchArea.css */
 .SearchArea {
   background-color: #FFF9F3;
-  padding: 10px 220px 50px 220px;
+  padding: 80px 220px 50px 220px;
 }
 
 .job-search-box {
@@ -12,6 +12,10 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   padding: 8px;
   gap: 5px;
+}
+
+.job-title{
+  font-size: 35px;
 }
 
 .search-input {

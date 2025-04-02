@@ -34,7 +34,7 @@ const SearchArea = () => {
 
     return (
         <div className="SearchArea">
-            <h2 className="job-title">There Are 65,866 Jobs <br /> Here For You!</h2>
+            <h1 className="job-title">There Are 65,866 Jobs <br /> Here For You!</h1>
             <p className="job-subtitle">Discover your next career move, freelance gig, or internship</p>
             <div className="job-search-box">
                 <div className="search-input">

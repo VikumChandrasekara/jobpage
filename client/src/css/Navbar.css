@@ -1,12 +1,18 @@
 /* Navbar styles */
 .navbar {
+    color: var(--text-color-b);
+    position: fixed;
+    background-color: var(--background-color);
+    width: 100%;
+  }
+  
+  .navbar-container{
+    padding: var(--padding-size);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 220px;
-    color: var(--text-color-b);
   }
-  
+
   .navbar .logo img {
     height: 40px; 
   }
