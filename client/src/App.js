@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
 import Banner from './components/Banner';
+import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import NewsLetter from './components/NewsLetter';
 import SearchArea from './components/SearchArea';
@@ -14,10 +15,11 @@ function App() {
       <>
       <Router>
           <Routes>
-            <Route path="/" element={<><Navbar /><SearchArea /><NewJobs /><Banner /><NewsLetter/><SocialMediaFeeds /></>} />
+            <Route path="/" element={<><Navbar /><SearchArea /><NewJobs /><Banner /><NewsLetter/><SocialMediaFeeds /><Footer /></>} />
             <Route path="/job-details" element={<><Navbar /><JobDetails /></>} />
           </Routes>
       </Router>
+
       </>
     </div>
   );
