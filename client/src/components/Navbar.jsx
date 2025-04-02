@@ -5,6 +5,7 @@ import jobpagelogo from '../assets/job-page-logo.png';
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <div className='navbar-container'>
       {/* Logo */}
       <div className="logo">
         <img src={jobpagelogo} alt="Logo" />
@@ -23,6 +24,8 @@ const Navbar = () => {
       <div className="nav-buttons">
         <button className="apply-btn">Apply for Job</button>
         <button className="post-btn">Post Vacancy</button>
+      </div>
+      
       </div>
     </nav>
   );
