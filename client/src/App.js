@@ -8,6 +8,8 @@ import SearchArea from './components/SearchArea';
 import SocialMediaFeeds from './components/SocialMediaFeeds';
 import JobDetails from './components/JobDetails';
 import NewJobs from './components/NewJobs';
+import JobDetailsDis from './components/JobDetailsDis';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -16,7 +18,9 @@ function App() {
       <Router>
           <Routes>
             <Route path="/" element={<><Navbar /><SearchArea /><NewJobs /><Banner /><NewsLetter/><SocialMediaFeeds /><Footer /></>} />
-            <Route path="/job-details" element={<><Navbar /><JobDetails /></>} />
+            <Route path="/job-details" element={<><Navbar /><JobDetails /><Banner /><Footer /></>} />
+            <Route path="/job-details-dis" element={<><Navbar /><JobDetailsDis /><Banner /><Footer /></>} />
+            <Route path="/contact-us" element={<><Navbar /><br></br><br></br><br></br><ContactUs /><NewsLetter /><Footer /></>} />
           </Routes>
       </Router>
 

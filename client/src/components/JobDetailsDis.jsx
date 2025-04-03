@@ -1,9 +1,9 @@
 import React from "react";
-import "../css/JobDetails.css";
+import "../css/JobDetailsDis.css";
 import jobdetails from "../assets/jobdetails.png"; // location
 
 
-const JobDetails = () => {
+const JobDetailsDis = () => {
   return (
     <div className="job-details-container">
       <br></br>
@@ -32,37 +32,28 @@ const JobDetails = () => {
               <img src={jobdetails} alt="Office meeting with diverse professionals" />
             </div>
             
-            <h3 className="job-section-title">Office Assistant Job Vacancies 2023</h3>
-            
-            <div className="job-info-grid">
-              <div className="job-info-item">
-                <h4>Job Title</h4>
-                <p>Office Assistant</p>
-              </div>
-              
-              <div className="job-info-item">
-                <h4>Company/Institution</h4>
-                <p>R.M.D Consultants (Pvt) Ltd, Sri Lanka</p>
-              </div>
-              
-              <div className="job-info-item">
-                <h4>Full details</h4>
-                <button className="btn-details">Full Details</button>
-              </div>
-              
-              <div className="job-info-item">
-                <h4>Send CV</h4>
-                <button className="btn-apply-now">Apply now</button>
-              </div>
-              
-              <div className="job-info-item">
-                <h4>Job Group</h4>
-                <button className="btn-join-group">Join Group</button>
-              </div>
-            </div>
+            <h3 className="job-section-title">The AliStudio Team</h3>
             
             <div className="job-description">
-              <p>The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for illustrative design and typography. This candidate will have experience in working with numerous different design platforms such as digital and print forms.</p>
+              <p>The <b>AliStudiO Design</b> team has a vision to estab"sh a trusted platform that enables productive and healthy
+enterprises in a world of digital aruß remote everything. constantly changing work patterns and norms, and the need
+for organizational resiliency.
+The ideal candidate will have strong creative skills and a portfolio of work which demonstrates their passion for
+illustrative design and typography. This candidate will have experiences in working Wth numerous different design
+platforms such as digital and print forms.</p>
+            </div>
+
+            <h3 className="job-section-title">Essential Knowledge, Skills, and Experience</h3>
+
+            <div className="job-description">
+              <p>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+                <li>A portfolio demonstrating thought through and polished end to end custorner journeys</li>
+             </p>
             </div>
             
             <div className="share-buttons">
@@ -164,4 +155,4 @@ const JobDetails = () => {
   );
 };
 
-export default JobDetails;
+export default JobDetailsDis;
