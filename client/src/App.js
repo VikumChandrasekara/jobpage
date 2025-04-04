@@ -10,6 +10,8 @@ import JobDetails from './components/JobDetails';
 import NewJobs from './components/NewJobs';
 import JobDetailsDis from './components/JobDetailsDis';
 import ContactUs from './components/ContactUs';
+import BrowseJobs from './components/BrowseJobs';
+import AdminLogin from './components/AdminLogin';
 
 function App() {
   return (
@@ -17,10 +19,15 @@ function App() {
       <>
       <Router>
           <Routes>
-            <Route path="/" element={<><Navbar /><SearchArea /><NewJobs /><Banner /><NewsLetter/><SocialMediaFeeds /><Footer /></>} />
+            <Route path="/" element={<><Navbar /><br></br><br></br><br></br><SearchArea /><Footer /></>} />
             <Route path="/job-details" element={<><Navbar /><JobDetails /><Banner /><Footer /></>} />
             <Route path="/job-details-dis" element={<><Navbar /><JobDetailsDis /><Banner /><Footer /></>} />
-            <Route path="/contact-us" element={<><Navbar /><br></br><br></br><br></br><ContactUs /><NewsLetter /><Footer /></>} />
+            <Route path="/contact" element={<><Navbar /><br></br><br></br><br></br><ContactUs /><NewsLetter /><Footer /></>} />
+            <Route path="/browse" element={<><Navbar /><br></br><br></br><br></br><SearchArea /><BrowseJobs /><Footer /></>} />
+
+            {/* admin */}
+            <Route path="/jp-admin" element={<><AdminLogin /></>} />
+            <Route path="/jp-admin/dashboard" element={<></>} />
           </Routes>
       </Router>
 

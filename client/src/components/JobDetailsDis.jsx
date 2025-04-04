@@ -10,6 +10,7 @@ const JobDetailsDis = () => {
       <br></br>
       <br></br>
       <br></br>
+      <br></br>
       {/* Job Title Section */}
       <section className="job-title-section">
         <h1>Senior UI / UX Designer</h1>

@@ -1,0 +1,86 @@
+  .admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--primary-color);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .admin-login-wrapper {
+    width: 400px;
+    background: var(--background-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+  }
+  
+  .admin-login-wrapper h1 {
+    text-align: center;
+    color: var(--text-color-b);
+    margin-bottom: 35px;
+    font-size: 1.8em;
+    font-weight: 600;
+  }
+  
+  .admin-login-input-group {
+    margin: 25px 0;
+    position: relative;
+  }
+  
+  .admin-login-input-group input {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: var(--background-color);
+    font-size: 15px;
+    color: var(--text-color-b);
+    transition: all 0.2s ease;
+  }
+  
+  .admin-login-input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px var(--primary-color-h);
+  }
+  
+  .admin-login-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 18px;
+  }
+  
+  .admin-login-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: var(--primary-color);
+    color: var(--text-color-w);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .admin-login-btn:hover {
+    background: var(--primary-color-h);
+  }
+  
+  /* Remove decorative circles for cleaner look */
+  .admin-login-decor {
+    display: none;
+  }
+  
+  @media (max-width: 480px) {
+    .admin-login-wrapper {
+      width: 90%;
+      padding: 30px;
+      margin: 20px;
+    }
+  }
